@@ -1,0 +1,114 @@
+:root {
+    --clr-primary: #ee6352;
+    --clr-secondary: #d16e8d;
+    --clr-accent: #f7f7ff;
+    --clr-gradient: linear-gradient(
+                    -90deg,
+                    var(--clr-primary),
+                    var(--clr-secondary)
+    );
+    --ff-title: bungee, sans-serif;
+    --ff-body: canada-type-gibson, sans-serif;
+    --fw-body: 300;
+    --fw-bold: 800;
+    --fw-title: 400;
+    --fw-number: 800;
+}
+
+body {
+    padding: 1rem;
+    min-height: 80vh;
+    font-family: var(--ff-body);
+    font-weight: var(--fw-body);
+    font-size: .95rem;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Styling Components
+demo-03: Importing SCSS into a Scoped Component
+*/
+
+//Variables
+$color-items: #9C27B0;
+$color-grey: #2c3e50;
+$color-blue: #003366;
+
+/*
+Using the addition symbol + means the elements placed after
+the first element will be styled if they match the condition.
+
+For example, h1 + h2 will dictate that all H2 elements after H1 will be
+styled in a way, but H3 will not.
+ */
+h1,h2,h3 {
+  margin-top: 10px;
+  margin-left: 20px;
+  text-align: left;
+}
+
+h1,h3 {
+  color: $color-grey;
+}
+h2 {
+  color: $color-items;
+}
+
+div {
+  font-family: 'Avenir', Helvetica, Arial, sans-serif;
+  color: #2c3e50;
+  margin-left: 20px;
+  text-align: left;
+}
+
+
+.even-columns-header {
+    display: flex;
+    //gap: 0.1em;
+    padding-left: 0.3em;
+    margin-bottom: .5em;
+    font-weight: bold;
+    font-size: large;
+}
+
+.even-columns-header > * {
+    flex: 1;
+}
+
+.even-columns {
+    display: flex;
+    //gap: 0.1em;
+    padding-left: 0.3em;
+}
+
+.even-columns > * {
+    flex: 1;
+}
+
+.card {
+    padding: 2em;
+    background: var(--clr-gradient);
+    color: white;
+    border-radius: 0.25rem;
+    margin-bottom: 0.5rem;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+button {
+    display: inline-block;
+    background: rgb(235, 50, 50);
+    border-radius: 10px;
+    font-size: 10px;
+    color: white;
+    padding: 5px 10px;
+    text-decoration: none;
+}
+.container {
+    width: min(95%, 30rem);
+    margin: 0 auto;
+}
